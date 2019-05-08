@@ -40,7 +40,9 @@
       "plugin:vue/essential",
       "@vue/standard"
     ],
-    "rules": {},
+    "rules": {
+      "allowIdentationTabs": true
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
