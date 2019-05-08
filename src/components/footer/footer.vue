@@ -18,3 +18,5 @@
   </v-footer>
 </v-app>
 </template>
+
+<script src="./footer.js"></script> 
