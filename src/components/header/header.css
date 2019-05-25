@@ -1,0 +1,39 @@
+:root
+{
+--G01: #85C174;
+--G02: #70B966;
+--G03: #70AF63;
+--G04: #62AB55;
+--G05: #5B9353;
+--B01: #353533;
+--P01: #9E84BC;
+--P02: #9B82BA;
+--P03: #8E71AF;
+--P04: #8764A8;
+--P05: #704C95;
+}
+.icon
+{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    color: var(--G05);
+}
+.icon span
+{
+    color: #353533;
+    font-size: .9em;
+    text-transform: none;
+}
+.mei
+{
+    font-family: 'Sriracha', cursive;
+    font-size: 2em !important;
+    font-weight: bold;
+    color: var(--B01);
+}
+.mei i { text-transform: none; color: var(--G05);}
+.v-toolbar
+{
+    z-index: 1000;
+}

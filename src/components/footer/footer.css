@@ -1,0 +1,8 @@
+.f-top
+{
+  background-color: rgba(53, 53, 51, .95) !important; 
+}
+.f-bottom
+{
+  background-color: var(--B01) !important;
+}
