@@ -25,15 +25,21 @@
     font-size: .9em;
     text-transform: none;
 }
-.mei
+
+
+.header .auth
 {
-    font-family: 'Sriracha', cursive;
-    font-size: 2em !important;
-    font-weight: bold;
-    color: var(--B01);
+    position: absolute;
+    right: 24px;
 }
-.mei i { text-transform: none; color: var(--G05);}
-.v-toolbar
+.header .auth .login
 {
-    z-index: 1000;
+    height: 50% !important;
+    border-radius: 10px;
+}
+.auth .register
+{
+    background-color: var(--G02);
+    height: 50% !important;
+    border-radius: 10px;
 }

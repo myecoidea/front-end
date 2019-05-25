@@ -4,7 +4,8 @@ export default {
   name: 'header',
   data: () => ({
     drawer: false,
-    expand: false
+    expand: false,
+    isLogin: false,
   }),
   components: {
     Profil
