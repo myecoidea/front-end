@@ -21,18 +21,33 @@
 }
 .icon span
 {
-    color: #353533;
+    color: var(--G05);
     font-size: .9em;
     text-transform: none;
+    margin-top: 5px;
+
+    display: block;
+}
+.icon span #active 
+{
+    display: none;
 }
 
+.header .title
+{
+    color: var(--B01);
 
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
 .header .auth
 {
     position: absolute;
     right: 24px;
 }
-.header .auth .login
+
+.auth .login
 {
     height: 50% !important;
     border-radius: 10px;
@@ -42,4 +57,9 @@
     background-color: var(--G02);
     height: 50% !important;
     border-radius: 10px;
+}
+
+.header .svg
+{
+    height: 25px;
 }

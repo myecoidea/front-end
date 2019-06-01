@@ -1,8 +1,12 @@
-.f-top
+.f
 {
-  background-color: rgba(53, 53, 51, .95) !important; 
+  background-color: rgba(53, 53, 51, .95) !important;
 }
 .f-bottom
 {
   background-color: var(--B01) !important;
+}
+
+.rounded-corner {
+  border-radius: 5px !important;
 }

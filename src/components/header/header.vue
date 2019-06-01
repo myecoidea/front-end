@@ -1,25 +1,30 @@
 <template>
 <div class="header">
     <v-toolbar ligth height="55" style="background-color: #fbfbfb !important;">
-        <a href="/"><img src="@/assets/logo.svg" class="icon" height="40px"></a>
         <v-spacer></v-spacer>
         <v-toolbar-items>
             <v-btn flat to="/">
-                <div class="icon"><span>Accueil</span><v-icon>home</v-icon></div>
+                <div class="icon">
+                    <span>Accueil</span>
+                    <img class="svg" src="@/assets/items/Home W.svg"/>
+                </div>
             </v-btn>
             <v-btn flat to="/idea/share-idee">
-                <div class="icon"><span >Ajout d'idée</span><v-icon>mdi-plus</v-icon></div>
+                <div class="icon">
+                    <span >Ajout d'idée</span>
+                    <img class="svg" src="@/assets/items/Add W.svg"/>
+                </div>
             </v-btn>
-            <v-btn flat to="quizz">
-                <div class="icon"><span >Quizz</span><v-icon>mdi-cards-outline</v-icon></div>
-            </v-btn>
-            <v-btn flat @click="drawer = !drawer" v-if="isLogin == true">
-                <div class="icon"><span >Mon compte</span><v-icon>mdi-account-outline</v-icon></div>
+            <v-btn flat to="/quizz">
+                <div class="icon">
+                    <span >Quizz</span>
+                    <img class="svg" src="@/assets/items/Quizz W.svg"/>
+                </div>
             </v-btn>
         </v-toolbar-items>
         <v-spacer></v-spacer>
         <v-toolbar-items class="auth">
-            <v-btn flat class="login">Connexion</v-btn><v-btn flat dark class="register">Inscription</v-btn>
+            <v-btn flat class="login" style="margin-right: 5px;">Connexion</v-btn><v-btn flat dark class="register">Inscription</v-btn>
         </v-toolbar-items>
     </v-toolbar>
     <v-navigation-drawer permanent fixed right v-show="drawer">
