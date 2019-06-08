@@ -5,7 +5,7 @@ export default {
   data: () => ({
     drawer: false,
     expand: false,
-    isLogin: false,
+    isLogin: false
   }),
   components: {
     Profil

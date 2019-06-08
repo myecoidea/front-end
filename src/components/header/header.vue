@@ -1,30 +1,38 @@
 <template>
 <div class="header">
-    <v-toolbar ligth height="55" style="background-color: #fbfbfb !important;">
+    <v-toolbar height="55" class="background">
+        <v-btn icon  @click="$store.commit('toggleTheme')">
+        <v-icon>
+          mdi-theme-light-dark
+        </v-icon>
+      </v-btn>
         <v-spacer></v-spacer>
         <v-toolbar-items>
             <v-btn flat to="/">
                 <div class="icon">
                     <span>Accueil</span>
-                    <img class="svg" src="@/assets/items/Home W.svg"/>
+                    <img v-if="!$store.getters.darkTheme" class="svg" src="@/assets/items/Home W.svg"/>
+                    <img v-else class="svg" src="@/assets/items/Home B.svg"/>
                 </div>
             </v-btn>
             <v-btn flat to="/idea/share-idee">
                 <div class="icon">
                     <span >Ajout d'idée</span>
-                    <img class="svg" src="@/assets/items/Add W.svg"/>
+                    <img v-if="!$store.getters.darkTheme" class="svg" src="@/assets/items/Add W.svg"/>
+                    <img v-else class="svg" src="@/assets/items/Add B.svg"/>
                 </div>
             </v-btn>
             <v-btn flat to="/quizz">
                 <div class="icon">
                     <span >Quizz</span>
-                    <img class="svg" src="@/assets/items/Quizz W.svg"/>
+                    <img v-if="!$store.getters.darkTheme" class="svg" src="@/assets/items/Quizz W.svg"/>
+                    <img v-else class="svg" src="@/assets/items/Quizz B.svg"/>
                 </div>
             </v-btn>
         </v-toolbar-items>
         <v-spacer></v-spacer>
         <v-toolbar-items class="auth">
-            <v-btn flat class="login" style="margin-right: 5px;">Connexion</v-btn><v-btn flat dark class="register">Inscription</v-btn>
+            <v-btn flat class="login background secondary--text" style="margin-right: 5px;">Connexion</v-btn><v-btn flat class="register primary darken-1">Inscription</v-btn>
         </v-toolbar-items>
     </v-toolbar>
     <v-navigation-drawer permanent fixed right v-show="drawer">

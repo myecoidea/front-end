@@ -1,5 +1,5 @@
 <template>
-<v-app>
+<v-app v-bind:dark="$store.getters.darkTheme">
   <link href="'https://fonts.googleapis.com/css?family=Sriracha'">
   <Header></Header>
   <v-content style="margin-bottom: 50px;">
@@ -13,7 +13,7 @@
 <script>
 import Header from '@/components/header/header.vue'
 import Footer from '@/components/footer/footer.vue'
- 
+
 export default {
   name: 'home',
   components: {
