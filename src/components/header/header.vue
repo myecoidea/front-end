@@ -1,6 +1,6 @@
 <template>
 <div class="header">
-    <v-toolbar height="55" class="background">
+    <v-toolbar height="55">
         <v-btn icon  @click="$store.commit('toggleTheme')">
         <v-icon>
           mdi-theme-light-dark
@@ -32,7 +32,7 @@
         </v-toolbar-items>
         <v-spacer></v-spacer>
         <v-toolbar-items class="auth">
-            <v-btn flat class="login background secondary--text" style="margin-right: 5px;">Connexion</v-btn><v-btn flat class="register primary darken-1">Inscription</v-btn>
+            <v-btn flat class="login" style="margin-right: 5px;">Connexion</v-btn><v-btn flat class="register white--text">Inscription</v-btn>
         </v-toolbar-items>
     </v-toolbar>
     <v-navigation-drawer permanent fixed right v-show="drawer">
