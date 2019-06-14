@@ -1,0 +1,8 @@
+.quiz .v-card__title
+{
+  color: var(--G03);
+}
+
+.quiz {
+  border-radius: 4px;
+}

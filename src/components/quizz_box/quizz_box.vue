@@ -37,5 +37,5 @@
     </v-stepper>
 </div>
 </template>
-<script src="./quizz.js"></script>
-<style src="./quizz.css"></style>
+<script src="./quizz_box.js"></script>
+<style src="./quizz_box.css"></style>
