@@ -12,6 +12,15 @@
 --P04: #8764A8;
 --P05: #704C95;
 }
+
+/* Class border -radius */
+.bd-1 {border-radius: 3px !important;}
+.bd-2 {border-radius: 5px !important;}
+.bd-3 {border-radius: 7px !important;}
+.bd-4 {border-radius: 10px !important;}
+.bd-5 {border-radius: 13px !important;}
+
+
 .icon
 {
     display: flex;
@@ -65,9 +74,3 @@
 }
 
 
-/* Class border -radius */
-.bd-1 {border-radius: 3px !important;}
-.bd-2 {border-radius: 5px !important;}
-.bd-3 {border-radius: 7px !important;}
-.bd-4 {border-radius: 10px !important;}
-.bd-5 {border-radius: 13px !important;}
