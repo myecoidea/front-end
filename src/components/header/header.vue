@@ -13,25 +13,11 @@
             </v-toolbar-items>
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-sm-and-down">
-                <v-btn flat bd-0 to="/">
+                <v-btn flat bd-0 :to="item.link" v-for="item in items" :key="item.id">
                     <div class="icon">
-                        <span>Accueil</span>
-                        <img v-if="!$store.getters.darkTheme" class="svg" src="@/assets/items/Home W.svg"/>
-                        <img v-else class="svg" src="@/assets/items/Home B.svg"/>
-                    </div>
-                </v-btn>
-                <v-btn flat bd-0 to="/idea/share-idee">
-                    <div class="icon">
-                        <span >Ajout d'idée</span>
-                        <img v-if="!$store.getters.darkTheme" class="svg" src="@/assets/items/Add W.svg"/>
-                        <img v-else class="svg" src="@/assets/items/Add B.svg"/>
-                    </div>
-                </v-btn>
-                <v-btn flat bd-0 to="/quizz">
-                    <div class="icon">
-                        <span >Quizz</span>
-                        <img v-if="!$store.getters.darkTheme" class="svg" src="@/assets/items/Quizz W.svg"/>
-                        <img v-else class="svg" src="@/assets/items/Quizz B.svg"/>
+                        <span>{{item.name}}</span>
+                        <img v-if="!$store.getters.darkTheme" class="svg" :src="require(`@/assets/items/${item.icon}_W.svg`)"/>
+                        <img v-else class="svg" :src="require(`@/assets/items/${item.icon}_B.svg`)"/>
                     </div>
                 </v-btn>
             </v-toolbar-items>
@@ -43,52 +29,32 @@
                 <v-btn flat bd-0 @click="drawer = !drawer">
                     <div class="icon">
                         <span >Profil</span>
-                        <img v-if="!$store.getters.darkTheme" class="svg" src="@/assets/items/Profil W.svg"/>
-                        <img v-else class="svg" src="@/assets/items/Profil B.svg"/>
+                        <img v-if="!$store.getters.darkTheme" class="svg" src="@/assets/items/Profil_W.svg"/>
+                        <img v-else class="svg" src="@/assets/items/Profil_B.svg"/>
                     </div>
                 </v-btn>
             </v-toolbar-items>
         </v-toolbar>
-        <v-navigation-drawer floating permanent fixed left width="200" v-show="menu">
+        <v-navigation-drawer permanent fixed left width="200" v-show="menu">
             <v-list-tile>
-                <v-list-tile-content>
-                    <v-list-tile-title>Menu</v-list-tile-title>
-                </v-list-tile-content>
-                <v-btn flat @click="menu = !menu">
+                <v-btn icon @click="$store.commit('toggleTheme')">
+                    <v-icon>
+                        mdi-theme-light-dark
+                    </v-icon>
+                </v-btn>
+                <v-spacer></v-spacer>
+                <v-btn flat icon @click="menu = !menu">
                     <v-icon>close</v-icon>
                 </v-btn>
             </v-list-tile>
             <v-divider></v-divider>
-            <v-btn icon @click="$store.commit('toggleTheme')">
-                            <v-icon>
-                                mdi-theme-light-dark
-                            </v-icon>
-                        </v-btn>
-            <v-list-tile>
-                <v-btn flat to="/">
+            <v-list-tile class="mt-1" v-for="item in items" :key="item.id">
+                <v-btn flat :to="item.link">
                     <div class="icon">
-                        <img v-if="!$store.getters.darkTheme" class="svg" src="@/assets/items/Home W.svg"/>
-                        <img v-else class="svg" src="@/assets/items/Home B.svg"/>
+                        <img v-if="!$store.getters.darkTheme" class="svg" :src="require(`@/assets/items/${item.icon}_W.svg`)"/>
+                        <img v-else class="svg" :src="require(`@/assets/items/${item.icon}_B.svg`)"/>
                     </div>
-                    <span class="text-none mx-3">Accueil</span>
-                </v-btn>
-            </v-list-tile>
-            <v-list-tile>
-                <v-btn flat to="/idea/share-idee">
-                    <div class="icon">
-                        <img v-if="!$store.getters.darkTheme" class="svg" src="@/assets/items/Add W.svg"/>
-                        <img v-else class="svg" src="@/assets/items/Add B.svg"/>
-                    </div>
-                    <span class="text-none mx-3">Ajout d'idée</span>
-                </v-btn>
-            </v-list-tile>
-            <v-list-tile>
-                <v-btn flat to="/quizz">
-                    <div class="icon">
-                        <img v-if="!$store.getters.darkTheme" class="svg" src="@/assets/items/Quizz W.svg"/>
-                        <img v-else class="svg" src="@/assets/items/Quizz B.svg"/>
-                    </div>
-                    <span class="text-none mx-3">Quizz</span>
+                    <span class="text-none mx-3">{{item.name}}</span>
                 </v-btn>
             </v-list-tile>
         </v-navigation-drawer>
