@@ -1,26 +1,24 @@
 <template>
-<div class="quizz" fluid>
-    <v-card flat min-height="85vh" class="ma-0 px-3">
-      <v-card-title class="headline justify-center">
-        Quizzes
-      </v-card-title>
-      <v-divider></v-divider>
-      <v-card-text>
-        <v-layout row wrap class="justify-center">
-          <v-card class="quiz ma-3 px-3 py-1" width="500" v-for="quizz in quizzs" :key="quizz.id" elevation="5">
-            <v-card-title class="title justify-center">
-              {{quizz.name}}
-            </v-card-title>
-            <v-card-text>
-              {{quizz.desc}}
-            </v-card-text>
-            <v-card-actions>
-              <v-btn flat class="text-none" round>Commencer</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-layout>
-      </v-card-text>
-    </v-card>
+<div class="pt-3">
+  <h2 class="justify-center">Quizzes</h2>
+  <v-divider></v-divider>
+  <v-container min-height="85vh">
+    <v-layout row wrap class="justify-center align-center">
+      <v-flex xs12 sm5 md4 lg2 v-for="quizz in quizzs" :key="quizz.id">
+        <v-card class="quizz ma-3 px-3 py-1 bd-3" elevation="5" :to="'/quizz/'+quizz.link">
+          <v-card-title class="title justify-center">
+            {{quizz.name}}
+          </v-card-title>
+          <v-card-text>
+            {{quizz.desc}}
+          </v-card-text>
+          <v-card-actions class="hidden-md-and-up justify-center">
+            <v-btn flat round block class="text-none">Commencer</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </div>
 </template>
 <script src="./quizz_home.js"></script>

@@ -4,15 +4,38 @@ export default {
     quizzs: [
       {
         name: 'Compost',
-        desc: 'Lorem ispum'
+        desc: 'Lorem ispum',
+        link: '2903'
       },
       {
         name: 'Toilettes sèches',
-        desc: 'Lorem ispum'
+        desc: 'Lorem ispum',
+        link: '309'
       },
       {
         name: 'Courses',
-        desc: 'Lorem ispum'
+        desc: 'Lorem ispum',
+        link: '3092'
+      },
+      {
+        name: 'Compost',
+        desc: 'Lorem ispum',
+        link: '2903'
+      },
+      {
+        name: 'Compost',
+        desc: 'Lorem ispum',
+        link: '2903'
+      },
+      {
+        name: 'Compost',
+        desc: 'Lorem ispum',
+        link: '2903'
+      },
+      {
+        name: 'Compost',
+        desc: 'Lorem ispum',
+        link: '2903'
       }
     ]
   })
