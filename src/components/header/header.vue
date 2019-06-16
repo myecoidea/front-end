@@ -14,7 +14,7 @@
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-sm-and-down">
                 <v-btn flat bd-0 :to="item.link" v-for="item in items" :key="item.id">
-                    <div class="icon">
+                    <div class="icon primary--text text-lighten-2">
                         <span>{{item.name}}</span>
                         <img v-if="!$store.getters.darkTheme" class="svg" :src="require(`@/assets/items/${item.icon}_W.svg`)"/>
                         <img v-else class="svg" :src="require(`@/assets/items/${item.icon}_B.svg`)"/>
@@ -23,7 +23,7 @@
             </v-toolbar-items>
             <v-spacer></v-spacer>
             <v-toolbar-items class="auth" v-show="!isLogin">
-                <v-btn flat class="login" style="margin-right: 5px;">Connexion</v-btn><v-btn flat class="register white--text">Inscription</v-btn>
+                <v-btn flat class="login" style="margin-right: 5px;">Connexion</v-btn><v-btn flat class="register white--text primary lighten-4">Inscription</v-btn>
             </v-toolbar-items>
             <v-toolbar-items class="account" v-show="isLogin">
                 <v-btn flat bd-0 @click="drawer = !drawer">
@@ -54,7 +54,7 @@
                         <img v-if="!$store.getters.darkTheme" class="svg" :src="require(`@/assets/items/${item.icon}_W.svg`)"/>
                         <img v-else class="svg" :src="require(`@/assets/items/${item.icon}_B.svg`)"/>
                     </div>
-                    <span class="text-none mx-3">{{item.name}}</span>
+                    <span class="text-none mx-3 primary--text text-lighten-3">{{item.name}}</span>
                 </v-btn>
             </v-list-tile>
         </v-navigation-drawer>

@@ -1,8 +1,3 @@
-.quizz .v-card__title
-{
-  color: var(--G03);
-}
-
 .quizz .v-card__text, .quizz .v-card__title, .quizz .v-card__actions {transition: .4s;}
 
 .quizz::before {
